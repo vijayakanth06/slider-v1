@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide to Unlock CAPTCHA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hidden-field {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+        <!-- Honeypot CAPTCHA -->
+        <div class="hidden-field">
+            <label for="extraField">Leave this field empty</label>
+            <input type="text" id="extraField" name="extraField">
+        </div>
+        
+    <div class="container">
+        <h2>Slide to Verify</h2>
+        <div id="slider">
+            <span></span>
+        </div>
+        <button id="submitBtn" disabled>Submit</button>
+    </div>
+
+    <script src="./script.js"></script>
+    <script> 
+    document.getElementById("extraField").addEventListener("input", function() { if (this.value !== "") { 
+        document.getElementById("submitBtn").disabled = true; } 
+        else { document.getElementById("submitBtn").disabled = false; } }); 
+    </script>
+</body>
+</html>
