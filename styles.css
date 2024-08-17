@@ -95,6 +95,10 @@ body {
 
     #slider span::after {
         font-size: 30px; /* Adjust arrow size for mobile */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     #submitBtn {
@@ -115,7 +119,11 @@ body {
     }
 
     #slider span::after {
-        font-size: 20px; /* Adjust arrow size for very small screens */
+        font-size: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Adjust arrow size for very small screens */
     }
 
     #submitBtn {
