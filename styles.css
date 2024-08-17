@@ -15,6 +15,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.hidden-field {
+    display: none;
+}
+
+/* Slider styles */
 #slider {
     width: 200px; /* Slider length */
     height: 40px;
@@ -40,6 +45,7 @@ body {
     left: calc(100% - 40px);
 }
 
+/* Button styles */
 #submitBtn {
     margin-top: 20px;
     padding: 10px 20px;

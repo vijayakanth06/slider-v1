@@ -41,7 +41,7 @@ document.addEventListener('mouseup', function () {
     isDragging = false;
 });
 
-// Touch events
+// Touch events for mobile
 handle.addEventListener('touchstart', function (e) {
     isDragging = true;
     startX = e.touches[0].pageX - slider.offsetLeft;
@@ -57,6 +57,19 @@ document.addEventListener('touchend', function () {
         handle.style.left = '0px';
     }
     isDragging = false;
+});
+
+// Honeypot CAPTCHA check
+document.getElementById("extraField").addEventListener("input", function() {
+    if (this.value !== "") {
+        submitBtn.disabled = true;
+        submitBtn.classList.remove('enabled');
+    } else {
+        if (slider.classList.contains('done')) {
+            submitBtn.disabled = false;
+            submitBtn.classList.add('enabled');
+        }
+    }
 });
 
 // Submit button click event
@@ -84,4 +97,3 @@ function resetTimer() {
         window.location.reload();
     }, sessionTimeout);
 }
-

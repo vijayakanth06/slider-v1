@@ -2,15 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible-Origin" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slide to Unlock CAPTCHA</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .hidden-field {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <!-- Honeypot CAPTCHA -->
@@ -23,23 +18,9 @@
         <div id="slider">
             <span></span>
         </div>
-        <button id="submitBtn" disabled>Submit</button>
+        <button id="submitBtn" disabled style="user-select: none;">Submit</button>
     </div>
-
-    <script>
-        document.getElementById("submitBtn").addEventListener("click", function() {
-            // Reset the index.html page
-            location.reload();
-        });
-    </script>
-    </div>
-
+    
     <script src="script.js"></script>
-    <script> 
-        document.getElementById("extraField").addEventListener("input", function() { if (this.value !== "") { 
-            document.getElementById("submitBtn").disabled = true; } 
-            else { document.getElementById("submitBtn").disabled = false; } }); 
-        </script>
 </body>
 </html>
-
