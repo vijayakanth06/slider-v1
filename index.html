@@ -7,16 +7,13 @@
     <title>Slide to Unlock CAPTCHA</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        window.onload = function() {
-            // Check if the URL contains the 'reloaded' query parameter
-            if (!window.location.search.includes('reloaded=true')) {
-                // Reload the page with the 'reloaded=true' query parameter
-                window.location.href = window.location.pathname + '?reloaded=true';
+        // This function ensures the page reloads if it's revisited, e.g., when the back button is pressed
+        window.addEventListener('pageshow', function(event) {
+            // Check if the page was loaded from cache (e.g., via back button)
+            if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+                // Ensure the page reloads
+                window.location.reload();
             }
-        };
-        window.addEventListener('popstate', function(event) {
-            // Reload the page when navigating back to index.html
-            window.location.reload();
         });
     </script>
 </head>
