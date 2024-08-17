@@ -91,9 +91,10 @@ body {
         width: 60px; /* Adjust handle size for mobile */
         height: 60px;
     }
+    
 
     #slider span::after {
-        font-size: 20px; /* Adjust arrow size for mobile */
+        font-size: 30px; /* Adjust arrow size for mobile */
     }
 
     #submitBtn {
@@ -114,7 +115,7 @@ body {
     }
 
     #slider span::after {
-        font-size: 18px; /* Adjust arrow size for very small screens */
+        font-size: 20px; /* Adjust arrow size for very small screens */
     }
 
     #submitBtn {
