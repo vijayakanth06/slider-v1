@@ -26,6 +26,14 @@
         <button id="submitBtn" disabled>Submit</button>
     </div>
 
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            // Reset the index.html page
+            location.reload();
+        });
+    </script>
+    </div>
+
     <script src="script.js"></script>
     <script> 
         document.getElementById("extraField").addEventListener("input", function() { if (this.value !== "") { 
