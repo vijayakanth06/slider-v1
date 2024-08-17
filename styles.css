@@ -83,8 +83,8 @@ body {
 /* Responsive adjustments */
 @media (max-width: 600px) {
     #slider {
-        width: 150px; /* Adjust slider width for mobile */
-        height: 150px; /* Adjust slider height for mobile */
+        width: 250px; /* Adjust slider width for mobile */
+        height: 60px; /* Adjust slider height for mobile */
     }
 
     #slider span {
@@ -104,13 +104,13 @@ body {
 
 @media (max-width: 400px) {
     #slider {
-        width: 120px; /* Further adjust slider width for very small screens */
-        height: 120px; /* Further adjust slider height for very small screens */
+        width: 250px; /* Further adjust slider width for very small screens */
+        height: 60px; /* Further adjust slider height for very small screens */
     }
 
     #slider span {
-        width: 50px; /* Further adjust handle size for very small screens */
-        height: 50px;
+        width: 60px; /* Further adjust handle size for very small screens */
+        height: 60px;
     }
 
     #slider span::after {
